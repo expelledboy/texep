@@ -1,19 +1,28 @@
 # Text Editor Enhancement Proposals
 
+Having developed for the third time a text object expansion plugin for yet another vim based environment, I see duplication of design, implementation, and efforts. But why? Lets for a second imagine one backend that could be configured to work as vim or emacs, but sharing logic to jump to function definition in python. This could end the great editor war!
+
+I envision designing javascript interfaces to common components needed by all text editors, with test suites, to assist in developing text editors where their components can be shared, while allowing endless customization. Why javascript? Arguably the most collaberative language available today, and because I dont want to see duplication of efforts occuring in seperate languages.
+
+That being said I do not have sufficient context as to the issues faced and the considerations behind the design choices made in todays leading text editors. I am hoping to foster collaboration between these teams here.
+
+Ultimately I do not want to be a bottleneck, or impose onto the community, beyond an initial draft of the process of collaboration. This is based on Python's PEP standard, however I condensed it to align with the philosophy of TEXEP.
+
 ## What is a TEXEP
 
 - Collect community efforts on issues pertaining to building text editors.
 - Document design decisions that have gone into text editors that follow TEXEP.
 - Can describe requirements of features for text editors or its processes or environment.
-- If needed provide concise technical specification and prototype implementation.
 - Enable effortless collaboration towards designing text editors.
+- Provide concise technical specification and a prototype implementation.
+- Build tools and guidelines to assist in developing TEXEP compliant editors.
 
 ## Philosophy
 
-- Explicit is better than implicit.
 - Simple is better than complex.
 - Clarity is better than verbosity.
 - Practicality beats purity.
+- Duplication is the devil.
 
 ## Submitting a TEXEP
 
@@ -39,7 +48,7 @@
   - Addresses backwards compatibility.
   - Complies with philosophy of TEXEP.
   - Is technically sound.
-- Collaborators will  assign its type and status labels to the GitHub issue.
+- Collaborators will assign its type and status labels to the GitHub issue.
 - Author needs to re-ignite discussion to finalize community acceptance.
   - Author must shepherd discussions, build consensus and document dissenting opinions.
 
@@ -97,7 +106,7 @@
 
 ##### Structure
 
-Standard GitHub markdown `README.md` document within a folder named TEXEP-XXX. Auxiliary files in support of the TEXEP can be included within the folder. Accomplanying GitHub issue which serves as a forum for discussion.
+Standard GitHub markdown `README.md` document within a folder named `./texep/XXX`. Auxiliary files in support of the TEXEP can be included within the folder. Accomplanying GitHub issue which serves as a forum for discussion.
 
 - Meta (maintained in GitHub)
   - Title (<44 chars)
@@ -135,15 +144,12 @@ Standard GitHub markdown `README.md` document within a folder named TEXEP-XXX. A
 
 ## Otherwise
 
-I seek to design, without wasting time implementing, a specification for text editors to follow that best handles requirements for GUI and plugin developers alike. That being said I do not have sufficient context as to the issues faced and the considerations behind the design choices made in todays leading text editors. I am hoping to foster collaboration between these teams here.
-
 TEXEP collaborators don't pass judgment on TEXEPs, acceptance must come from the community. They merely do the administrative & editorial part (which is generally a low volume task).
 
 Please discuss issues or updates to a TEXEP on the original GitHub issue. Without sufficient context you will loose community engagement.
-
-Ultimately I do not want to be a bottleneck, or impose onto the community, beyond an initial draft of the process of collaboration. This is based on Python's PEP standard, however I condensed it to align with the philosophy of TEXEP.
 
 # Next Steps
 
 - Get key community figures to become collaborators.
 - Build tools (such as the linter) to assist authors contributing.
+- Create TEXEP which details core axioms of text editors.
